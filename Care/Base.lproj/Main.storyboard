@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Care" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="3000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN7-CV-GOe">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="3000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11A-QP-gt8">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-3L-r3T" userLabel="background">
+                                                <rect key="frame" x="-134" y="-103" width="660" height="1051"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-RH-VNi">
+                                                <rect key="frame" x="76" y="982" width="240" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Погодные условия" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nh-1x-PdD">
+                                                <rect key="frame" x="48" y="74" width="297" height="122"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="23"/>
+                                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moscow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnn-IX-rCO">
+                                                <rect key="frame" x="47" y="13" width="298" height="183"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
+                                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp0-Rl-bnR">
+                                                <rect key="frame" x="76" y="138" width="240" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="50"/>
+                                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1900" id="0AD-WZ-yRi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="11A-QP-gt8" firstAttribute="top" secondItem="mN7-CV-GOe" secondAttribute="top" id="7Ob-n6-d5f"/>
+                                    <constraint firstAttribute="trailing" secondItem="11A-QP-gt8" secondAttribute="trailing" id="Bv7-mX-rdd"/>
+                                    <constraint firstAttribute="bottom" secondItem="11A-QP-gt8" secondAttribute="bottom" id="CB9-nU-4Z2"/>
+                                    <constraint firstItem="11A-QP-gt8" firstAttribute="leading" secondItem="mN7-CV-GOe" secondAttribute="leading" id="oGO-2e-Ifz"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OvJ-Th-EcB"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.231372565" blue="0.31372550129999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="mN7-CV-GOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AEL-su-YYM"/>
+                            <constraint firstItem="11A-QP-gt8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BQ7-YI-sUX"/>
+                            <constraint firstItem="mN7-CV-GOe" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="LVa-QP-aDN"/>
+                            <constraint firstItem="mN7-CV-GOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SSt-7h-nuj"/>
+                            <constraint firstAttribute="bottom" secondItem="mN7-CV-GOe" secondAttribute="bottom" id="jxC-dq-629"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="3000"/>
+                    <connections>
+                        <outlet property="background" destination="AbG-3L-r3T" id="35C-mj-e10"/>
+                        <outlet property="cityNameLabel" destination="Vnn-IX-rCO" id="eFS-hL-wLz"/>
+                        <outlet property="tempurateLabel" destination="Kp0-Rl-bnR" id="Rmg-hy-ilF"/>
+                        <outlet property="weatherDescriptionLabel" destination="0Nh-1x-PdD" id="zjW-B6-eLH"/>
+                        <outlet property="weatherIconImageView" destination="6gA-RH-VNi" id="pnP-tI-QVr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
