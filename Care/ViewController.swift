@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setBackground()
         startLocationManager()
-        
+       
         view.addSubview(galleryCollectionView)
         galleryCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         galleryCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -34,8 +34,8 @@ class ViewController: UIViewController {
         galleryCollectionView.heightAnchor.constraint(equalToConstant: 600).isActive = true
         
         
-        
-        galleryCollectionView.set(cells: Model.Snimki())
+        galleryCollectionView.reloadData()
+  
         
     }
     
@@ -61,6 +61,16 @@ class ViewController: UIViewController {
         tempurateLabel.text = weatherData.main.temp.description + "°"
         weatherIconImageView.image = UIImage(named: weatherData.weather[0].icon)
         
+
+        let asd = Double(weatherData.main.temp.description)
+        let ass = Int(asd ?? 0)
+        
+            if 0..<10 ~= ass {
+            galleryCollectionView.set(cells: Model.Snimki010())
+            } else if 10..<50 ~= ass {
+            galleryCollectionView.set(cells: Model.Snimki1020())
+        }
+        galleryCollectionView.reloadData()
     }
     
     
@@ -88,6 +98,7 @@ class ViewController: UIViewController {
             self.weatherData = weatherData
             DispatchQueue.main.async {
                 self.uptadeView()
+               
             }
         }
         task.resume()
@@ -99,6 +110,7 @@ extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations : [CLLocation]) {
         if let lastLocation = locations.last{
             uptadeWeatherInfo(latitude: lastLocation.coordinate.latitude, longtitude: lastLocation.coordinate.longitude)
+               
         }
     }
 }
